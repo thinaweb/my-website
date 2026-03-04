@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+header{
+    /* background:black; */
+    color:rgb(255, 0, 0);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 20px;
+    position:relative;
+    margin-bottom: 30px;
+}
+
+header h1{
+    margin:0;
+    font-size:20px;
+}
+
+/* MENU */
+header ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+    margin:0;
+}
+
+header ul li a{
+    color:rgb(5, 5, 5);
+    text-decoration:none;
+    width: 100%;
+    
+}
+
+/* ICON BAR */
+.bar{
+    font-size:25px;
+    cursor:pointer;
+    display:none;
+}
+ul a:hover{
+ color: red;
+  width: 100%;
+}
+/* MOBILE */
+@media(max-width:768px){
+
+    .bar{
+        display:block;
+    }
+
+    header ul{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+        color: black;
+        background:rgb(255, 255, 255);
+    }
+
+    header ul.show{
+        display:flex;
+    }
+   
+}
+
+.logo{
+    margin-bottom: 30px;
+    /* background-color: #dcdcdc; */
+    /* margin-left: 10px; */
+    /* margin: auto; */
+    width: 100%;
+}
+.logo img{
+
+   margin-left: 16px;
+    width: 90%;
+    height:230px ;
+}
+h2{
+  text-align: center;
+  padding: 40px;
+  background-color: #dcdcdc;
+  margin-bottom: 30px;
+}
+
+ .filters {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;   /* important */
+}
+
+/* Select styling */
+.filters select {
+  flex: 2; /* category bigger */
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #d5d5d5;
+  font-size: 14px;
+  background-color: #eeeeee;
+  outline: none;
+  cursor: pointer;
+  color: black;
+}
+
+/* Make location smaller */
+#location {
+  flex: 1;
+}
+
+/* Blue focus like your screenshot */
+.filters select:focus {
+  border: 1px solid #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Show button */
+.sho {
+  height: 40px; 
+  padding: 0 16px;               /* same height as select */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  /* padding: 0 22px; */
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* FIXED hover class */
+.sho:hover {
+  opacity: 0.85;
+}
+
+/* Mobile responsive */
+/* 📱 All phones */
+@media (max-width: 600px) {
+
+  .filters {
+    width: 100%;
+    gap: 6px;
+    flex-wrap: nowrap;   /* keep one line */
+  }
+
+  .filters select {
+    flex: 1;
+    min-width: 0;        /* prevent overflow */
+    height: 34px;
+    font-size: 12px;
+    padding: 0 6px;
+  }
+
+  #category {
+    flex: 1.4;           /* slightly bigger */
+  }
+
+  .sho {
+    height: 34px;
+    font-size: 12px;
+    padding: 0 8px;
+    white-space: nowrap;
+  }
+
+}
+
+#jobTitle{
+    margin-top:20px;
+    font-size: 14px;
+    color: #6f6f6f;
+}
+
+#jobList{
+    margin-top:15px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:15px;
+}
+
+.job-card{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.job-card h3{
+  font-size: 15px;
+  color: #155DFC;
+  margin:0;
+}
+
+.job-card p{
+    margin:6px 0;
+}
+
+.view-text{
+    font-size:15px;
+    color:#777;
+    cursor:pointer;
+}
+
+
+
+
+
+/* GRID LAYOUT */
+
+/* Container Grid */
+.container{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:20px;
+  padding:0px;
+}
+h4{
+  margin-top: 20px;
+}
+.card{
+  background:#eee;
+  padding:20px;
+  /* border-radius:12px; */
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* PERFECT FIXED-LOOK SQUARE */
+.card img{
+  width:100%;
+  max-width:300px;   /* bigger */
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:7px;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+  .container{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+.service-section{
+  padding:80px 20px;
+  background:#f8f8f8;
+}
+
+.service-container{
+  /* background-color: #3b82f6; */
+  max-width:1300px;
+  margin:auto;
+  text-align:center;
+}
+
+.service-image{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  border-radius:15px;
+  margin-bottom:25px;
+}
+.text-middle{
+  font-size: 14px;
+}
+.service-title{
+  font-size:22px;
+  margin-bottom:30px;
+  font-weight:600;
+}
+
+.service-content{
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  text-align:left;
+}
+
+.service-list{
+  font-size: 14px;
+  flex:1;
+  list-style:disc;
+  padding-left:20px;
+  line-height:1.3;
+}
+
+.service-text{
+  flex:1;
+}
+
+span{
+  /* background-color: #3b82f6; */
+  color: rgb(46, 45, 45);
+  margin-top: 30px;
+  font-size: smaller;
+}
+.contact, a{
+  margin-top: 20px;
+  font-size: 13.5px;
+  margin-bottom: 20px;
+  color: rgb(155, 43, 80) ;
+}
+
+.service-text p{
+  color:#555;
+  line-height:1.6;
+}
+h4{
+  margin-bottom: 15px;
+}
+.buttom-text{
+  line-height: 1.5;
+}
+hr{
+  background-color: black;
+  height: 1.8px;
+}
+.find-local, button{
+  margin-top: 30px;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+}
+button{
+  background: linear-gradient(to bottom, rgb(32, 69, 97), rgb(217, 21, 80));
+}
+/* Mobile */
+@media(max-width:768px){
+  .service-content{
+    flex-direction:column;
+  }
+
+  .service-image{
+    /* background-color: #3b82f6; */
+    height:250px;
+  }
+
+  .service-title{
+    font-size:18px;
+  }
+}
+
+.swiper{
+    /* background-color: #3b82f6; */
+  width:90%;
+  height: 330px;
+  /* margin:50px auto; */
+}
+
+.swiper-slide{
+  text-align:center;
+}
+
+.swiper-slide img{
+  width:100%;
+  border-radius:7px;
+}
+
+.swiper-slide p{
+  margin-top:10px;
+  font-style:italic;
+}
+
+/* ប្តូរពណ៌ប៊ូតុង */
+.swiper-button-next,
+.swiper-button-prev{
+  color:gray;
+}
+
+/* ប្តូរពណ៌ dots */
+.swiper-pagination-bullet{ 
+  background:#bbb;
+  opacity:1;
+}
+.dort{
+    margin-top: 45px;
+}
+.swiper-pagination-bullet-active{
+  background:black;
+}

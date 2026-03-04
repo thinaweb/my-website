@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# ប្តូរឱ្យត្រូវជាមួយ Folder របស់បង
+media_folder: "img" 
+public_folder: "img"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Main Image", name: "image", widget: "image" }
+          - { label: "Body Content", name: "body", widget: "markdown" }

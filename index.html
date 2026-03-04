@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Slider</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<!--======= link fornawsome===== -->
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+
+</head>
+
+<body>
+    <header>
+      <h1>Great Local Job</h1>
+
+      <div class="bar" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <ul id="menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">POST AD</a></li>
+        <li><a href="#">FOR SALE</a></li>
+        <li><a href="#">SIGN UP</a></li>
+        <li><a href="#">SIGN IN</a></li>
+      </ul>
+    </header>
+
+    <div class="logo" id="logo">
+      <img src="/img/job.jpg" alt="">
+    </div>
+       <div class="filters">
+
+<select id="jobCategory">
+<option value="">Select Job Category</option>
+<option>Accounting</option>
+<option>Administrative</option>
+<option>Analyst</option>
+<option>Assistant</option>
+<option>Automotive</option>
+<option>Business</option>
+<option>Cleaning</option>
+<option>Client Services / Customer Service</option>
+<option>Computers</option>
+<option>Construction</option>
+<option>Education</option>
+<option>Engineering</option>
+<option>Entertainment</option>
+<option>Finance</option>
+<option>Food & Beverage</option>
+<option>General Labor</option>
+<option>Healthcare</option>
+<option>Hospitality</option>
+<option>Legal</option>
+<option>Management</option>
+<option>Manufacturing</option>
+<option>Marketing</option>
+<option>Medical</option>
+<option>No Experience Needed</option>
+<option>Retail</option>
+<option>Sales</option>
+<option>Security</option>
+<option>Tech & IT</option>
+<option>Transportation</option>
+<option>Other Jobs</option>
+</select>
+
+<select id="jobLocation">
+<option value="">Select Location</option>
+<option>CT-Hartford</option>
+<option>CT-Stamford</option>
+<option>DE</option>
+<option>MA-Annapolis</option>
+<option>MD-Baltimore</option>
+<option>ME</option>
+<option>NH</option>
+<option>NJ-Central</option>
+<option>NJ-South</option>
+<option>NY-Bronx</option>
+<option>NY-Hudson Valley</option>
+<option>NY-Long Island</option>
+<option>NY-Westchester</option>
+<option>NY Upstate</option>
+<option>PA</option>
+<option>PA-Lehigh Valley</option>
+<option>PA-Philadelphia</option>
+<option>PA-Pittsburgh</option>
+<option>RI</option>
+<option>VA</option>
+<option>VA-Northern</option>
+<option>YT</option>
+<option>Wash DC</option>
+</select>
+
+<!-- <button onclick="showJobs()">Show Result</button> -->
+<div class="sho" onclick="showJobs()">Show Results</div>
+</div>
+<div id="jobTitle"></div>
+<div id="jobList"></div>
+
+    <section class="categories" id="categoriessection" >
+    <div class="container">
+
+       <div class="card">
+      <img src="/img/first.jpg" alt="">
+        <h4>Administrative, CLient Support, Assistant</h4>
+      </div>
+       <div class="card">
+        <img src="/img/bussiness.jpg" alt="">
+        <h4>Business & Management, Analyst</h4>
+      </div> 
+
+       <div class="card">
+        <img src="/img/cleaning.jpg" alt="">
+        <h4>Cleaning & Maintenance</h4>
+      </div>
+
+      <div class="card">
+        <img src="/img/education.jpg" alt="">
+        <h4>Education</h4>
+      </div>
+
+      <div class="card">
+        <img src="/img/food.jpg" alt="">
+        <h4>Food, Beverage & Hospitality</h4>
+      </div>
+
+      <div class="card">
+        <img src="/img/health.jpg" alt="">
+       <h4>Healthcare & Medical</h4>
+      </div>
+
+      <div class="card">
+        <img src="/img/no experince.jpg" alt="">
+        <h4>No Experience Needed</h4>
+      </div>
+
+      <div class="card">
+        <img src="/img/retail.jpg" alt="">
+        <h4>Retail</h4>
+      </div>
+
+      <div class="card">
+        <img src="img/sale.jpg" alt="">
+        <h4>Sales & Marketing</h4>
+      </div>
+
+      <div class="card">
+        <img src="img/tect.jpg" alt="">
+       <h4>Tech & IT</h4>
+      </div>
+
+      <div class="card">
+        <img src="img/transportation.jpg" alt="">
+        <h4>Transportation, Automotive</h4>
+      </div>
+
+      <div class="card">
+        <img src="img/resume.jpg" alt="">
+        <h4>Resumes</h4>
+      </div>
+
+      
+
+    </div>
+  </section>
+
+  <section class="service-section" id="servicesection">
+
+  <div class="service-container">
+
+    <img src="https://finditmarket.com/wp-content/uploads/2025/11/Page-2-Image-33-2-scaled-1-2048x919.jpg" class="service-image">
+
+    <div class="text-middle">
+      Local Skilled Contractors & Home Services 
+    </div>
+    <div class="service-content">
+      <ul class="service-list">
+        <li><strong>Plumbing</strong></li>
+        <li><strong>Electrical Installation</strong></li>
+        <li><strong>Painting & Decorating</strong></li>
+        <li><strong>Roof Repair</strong></li>
+        <li><strong>Maintenance Services</strong></li>
+        <li><strong>Commercial & Residential</strong></li>
+      </ul>
+    </div>
+    <div class="buttom-text">
+      <h4> New England to Wash DC/VA Area</h4>
+      <span class="thin"> Find It Market connects customers with local skilled Contractors & Home Services. No job is too big or too small. Compare profiles, fees and availability.</span>
+    </div>
+    <div class="contact">
+      <a href="">Contractor Signup  ></a>
+    </div>
+    <hr>
+     <div class="find-local">
+      <button>Find Local Contractors ></button>
+    </div>
+  </div>
+
+</section>
+
+
+<div class="swiper mySwiper" id="swipersection">
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide">
+      <img src="/img/Contractors, Local Pros.jpg">
+      <p>Contractors, Local Pros</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Emergency Repair.jpg">
+      <p>Emergency Repair</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/handyman.jpg">
+      <p>Handyman</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Appliance Repair & Installation.jpg">
+      <p>Appliance Repair & Installation</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Painters.jpg">
+      <p>Painters: Interior & Exterior</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Plumber, HVAC.jpg">
+      <p>Plumber, HVAC</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Roofers.jpg">
+      <p>Roofers</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Cleaning Services.jpg">
+      <p>Cleaning Services</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Additions, Add-on.jpg">
+      <p>Additions, Add-on</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Demolition.jpg">
+      <p>Demolition</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Insulation.jpg">
+      <p>Insulation</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Carpenter.jpg">
+      <p>Carpenter</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Fence Install, Repair.jpg">
+      <p>Fence Install, Repair</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Electrician.jpg">
+      <p>Electrician</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Junk Removal.jpg">
+      <p>Junk Removal</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Tree Service.jpg">
+      <p>Tree Service</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Pest Control.jpg">
+      <p>Pest Control</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Driveway Repair.jpg">
+      <p>Driveway Repair</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Flooring1.jpg">
+      <p>Flooring</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/General Contractor.jpg">
+      <p>General Contractor</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Movers.jpg">
+      <p>Movers</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Lawncare - Landscaping.jpg">
+      <p>Lawncare - Landscaping</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Kitchen.jpg">
+      <p>Kitchen Renovations/Remodeling</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Bathroom.jpg">
+      <p>Bathroom Renovations/ Remodeling</p>
+    </div>
+
+    <div class="swiper-slide">
+      <img src="/img/Basements & Attics.jpg">
+      <p>Basements & Attics</p>
+    </div>
+
+  </div>
+
+  <!-- ប៊ូតុង -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
+  <!-- Dots -->
+   <div class="dort">
+    <div class="swiper-pagination"></div>
+   </div>
+  
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+
+  // --- ADD THIS SECTION ---
+  autoplay: {
+    delay: 2000, // 2000ms = 2 seconds
+    disableOnInteraction: false, // Keeps sliding even after you click a button
+  },
+  // ------------------------
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 }
+  }
+});
+function showJobs(){
+
+    const category = document.getElementById("jobCategory").value;
+    const location = document.getElementById("jobLocation").value;
+    const jobList = document.getElementById("jobList");
+    const jobTitle = document.getElementById("jobTitle");
+
+    jobList.innerHTML = "";
+    jobTitle.innerHTML = "";
+
+    if(category === "" || location === ""){
+        alert("Please select both category and location!");
+        return;
+    }
+
+    jobTitle.innerHTML = category + " jobs in " + location;
+
+    // Generate 25 job cards
+    for(let i = 1; i <= 25; i++){
+
+        const salary = 2500 + (i * 30);
+
+        const card = document.createElement("div");
+        card.className = "job-card";
+
+        card.innerHTML = `
+            <h3>${category}</h3>
+            
+            <p>$</p>
+    
+            <span class="view-text">View ></span>
+        `;
+
+        jobList.appendChild(card);
+    }
+    document.getElementById("logo").style.display = "none";
+    document.getElementById("categoriessection").style.display = "none";
+    document.getElementById("servicesection").style.display = "none";
+    document.getElementById("swipersection").style.display = "none";
+}
+
+function viewJob(number){
+    alert("Viewing job number " + number);
+}
+
+</script>
+
+</body>
+</html>
